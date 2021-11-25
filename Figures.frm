@@ -31,11 +31,9 @@ Private Declare Function SafeArrayGetDim Lib "Oleaut32.dll" (ByRef saArray() As 
 Private Declare Sub RtlMoveMemory Lib "Kernel32.dll" (Destination As Long, Source As Long, ByVal Length As Long)
 
 'The constants used by this program:
+Private Const PI As Double = 3.14159265358979           'Defines the value of PI.
 Private Const DEGREES_PER_RADIAN As Double = 180 / PI   'Defines the number of degrees per radian.
 Private Const NO_COLOR As Long = -1                     'Indicates that no color is to be used.
-Private Const PI As Double = 3.14159265358979           'Defines the value of PI.
-
-
 
 'This procedure draws the specified polygon at the specified angle and position.
 Private Sub DrawFigure(x As Long, y As Long, Radii() As Long, Optional Angle As Double = 0, Optional EdgeColor As Long = vbBlack, Optional LineWidth As Long = 1, Optional DrawRadii As Boolean = False)
