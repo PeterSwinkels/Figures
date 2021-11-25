@@ -31,9 +31,9 @@ Private Declare Function SafeArrayGetDim Lib "Oleaut32.dll" (ByRef saArray() As 
 Private Declare Sub RtlMoveMemory Lib "Kernel32.dll" (Destination As Long, Source As Long, ByVal Length As Long)
 
 'The constants used by this program:
-Private Const NO_COLOR As Long = -1             'Indicates that no color is to be used.
-Private Const PI As Double = 3.14159265358979   'Contains the mathematical constant PI.
-Private Const TO_RADIANS As Double = 180 / PI   'This value is used to convert degrees to radians.
+Private Const DEGREES_PER_RADIAN As Double = 180 / PI   'Defines the number of degrees per radian.
+Private Const NO_COLOR As Long = -1                     'Indicates that no color is to be used.
+Private Const PI As Double = 3.14159265358979           'Defines the value of PI.
 
 
 
@@ -51,14 +51,14 @@ Degrees = Angle
 Increment = 360 / (Abs(UBound(Radii()) - LBound(Radii())) + 1)
 Me.DrawWidth = LineWidth
 For Radian = LBound(Radii()) To UBound(Radii())
-   RadianTipX = (Cos(Degrees / TO_RADIANS) * Radii(Radian)) + x
-   RadianTipY = (Sin(Degrees / TO_RADIANS) * Radii(Radian)) + y
+   RadianTipX = (Cos(Degrees / DEGREES_PER_RADIAN) * Radii(Radian)) + x
+   RadianTipY = (Sin(Degrees / DEGREES_PER_RADIAN) * Radii(Radian)) + y
    If Radian = UBound(Radii()) Then
-      NextRadianTipX = (Cos((Degrees + Increment) / TO_RADIANS) * Radii(LBound(Radii()))) + x
-      NextRadianTipY = (Sin((Degrees + Increment) / TO_RADIANS) * Radii(LBound(Radii()))) + y
+      NextRadianTipX = (Cos((Degrees + Increment) / DEGREES_PER_RADIAN) * Radii(LBound(Radii()))) + x
+      NextRadianTipY = (Sin((Degrees + Increment) / DEGREES_PER_RADIAN) * Radii(LBound(Radii()))) + y
    Else
-      NextRadianTipX = (Cos((Degrees + Increment) / TO_RADIANS) * Radii(Radian + 1)) + x
-      NextRadianTipY = (Sin((Degrees + Increment) / TO_RADIANS) * Radii(Radian + 1)) + y
+      NextRadianTipX = (Cos((Degrees + Increment) / DEGREES_PER_RADIAN) * Radii(Radian + 1)) + x
+      NextRadianTipY = (Sin((Degrees + Increment) / DEGREES_PER_RADIAN) * Radii(Radian + 1)) + y
    End If
 
    If DrawRadii Then
