@@ -55,7 +55,7 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError() = vbIgnore Then Resume EndProcedure
    If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
@@ -70,7 +70,7 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError() = vbIgnore Then Resume EndProcedure
    If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
@@ -87,7 +87,7 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError() = vbIgnore Then Resume EndProcedure
    If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
@@ -101,7 +101,7 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError() = vbIgnore Then Resume EndProcedure
    If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
@@ -115,7 +115,7 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError() = vbIgnore Then Resume EndProcedure
    If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
@@ -135,7 +135,7 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError() = vbIgnore Then Resume EndProcedure
    If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
@@ -149,7 +149,7 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError() = vbIgnore Then Resume EndProcedure
    If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
@@ -163,7 +163,7 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError() = vbIgnore Then Resume EndProcedure
    If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
