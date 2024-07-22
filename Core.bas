@@ -52,8 +52,8 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
 'This procedure gives the command to generate and draw several different polygons.
@@ -75,8 +75,8 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
 'This procedure manages the option that indicates whether or not radians will be drawn.
@@ -93,8 +93,8 @@ EndProcedure:
    Exit Function
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Function
 
 'This procedure extends one polygon by appending another polygon and returns the result.
@@ -118,8 +118,8 @@ EndProcedure:
    Exit Function
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Function
 
 'This procedure generates a set of radii using the specified seed radii and returns the result.
@@ -156,8 +156,8 @@ EndProcedure:
    Exit Function
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Function
 
 'This procedure handles any errors that occur.
@@ -191,8 +191,8 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
 'This procedure returns information about this program.
@@ -209,8 +209,8 @@ EndProcedure:
    Exit Function
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Function
 
 

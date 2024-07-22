@@ -55,8 +55,8 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
 'This procedure toggles the animator on/off.
@@ -70,8 +70,8 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
 'This procedure animates the various figures to be displayed by changing their angle.
@@ -87,8 +87,8 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
 'This procedure gives the command to toggle drawing radians on/off.
@@ -101,8 +101,8 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
 'This procedure generates and displays several figures.
@@ -115,8 +115,8 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
 'This procedure initializes this window.
@@ -135,8 +135,8 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
 'This procedure closes this program when this window is closed.
@@ -149,8 +149,8 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
 'This procedure displays this program's information.
@@ -163,8 +163,8 @@ EndProcedure:
    Exit Sub
    
 ErrorTrap:
-   If HandleError() = vbIgnore Then Resume EndProcedure
-   If HandleError(ReturnPreviousChoice:=True) = vbIgnore Then Resume
+   If HandleError() = vbRetry Then Resume EndProcedure
+   If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
 
