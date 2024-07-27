@@ -2,14 +2,14 @@ VERSION 5.00
 Begin VB.Form InterfaceWindow 
    AutoRedraw      =   -1  'True
    BackColor       =   &H00000000&
-   ClientHeight    =   3195
+   ClientHeight    =   3192
    ClientLeft      =   60
-   ClientTop       =   645
+   ClientTop       =   648
    ClientWidth     =   4680
    KeyPreview      =   -1  'True
-   ScaleHeight     =   213
+   ScaleHeight     =   266
    ScaleMode       =   3  'Pixel
-   ScaleWidth      =   312
+   ScaleWidth      =   390
    StartUpPosition =   2  'CenterScreen
    Begin VB.Timer Animator 
       Enabled         =   0   'False

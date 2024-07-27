@@ -1,6 +1,6 @@
 Type=Exe
 Form=Interface.frm
-Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#C:\Windows\SysWOW64\stdole2.tlb#OLE Automation
+Reference=*\G{00020430-0000-0000-C000-000000000046}#2.0#0#..\..\..\..\Windows\SysWOW64\stdole2.tlb#OLE Automation
 Module=CoreModule; Core.bas
 IconForm="InterfaceWindow"
 Startup="Sub Main"
@@ -12,7 +12,7 @@ HelpContextID="0"
 CompatibleMode="0"
 MajorVer=1
 MinorVer=0
-RevisionVer=5
+RevisionVer=6
 AutoIncrementVer=0
 ServerSupportFiles=0
 VersionComments="This program demonstrates how to generate geometric figures based on radii of varying length and number."

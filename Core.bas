@@ -106,12 +106,14 @@ Dim UnextendedSize As Long
 
    Extended() = Figure()
    
-   ExtensionSize = (UBound(Extension()) - LBound(Extension())) + 1
-   UnextendedSize = UBound(Extended()) - LBound(Extended())
+   If Not SafeArrayGetDim(Extension()) = 0 Then
+      ExtensionSize = (UBound(Extension()) - LBound(Extension())) + 1
+      UnextendedSize = UBound(Extended()) - LBound(Extended())
    
-   ReDim Preserve Extended(LBound(Extended()) To UBound(Extended()) + ExtensionSize) As Long
+      ReDim Preserve Extended(LBound(Extended()) To UBound(Extended()) + ExtensionSize) As Long
    
-   RtlMoveMemory Extended(UnextendedSize + 1), Extension(LBound(Extension())), (ExtensionSize * 4)
+      RtlMoveMemory Extended(UnextendedSize + 1), Extension(LBound(Extension())), (ExtensionSize * 4)
+   End If
    
 EndProcedure:
    ExtendFigure = Extended()
