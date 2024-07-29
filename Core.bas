@@ -79,7 +79,7 @@ ErrorTrap:
    If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
-'This procedure manages the option that indicates whether or not radians will be drawn.
+'This procedure manages the option that indicates whether or not radii will be drawn.
 Public Function DrawRadii(Optional NewDrawRadii As Variant) As Boolean
 On Error GoTo ErrorTrap
 Static CurrentDrawRadii As Boolean

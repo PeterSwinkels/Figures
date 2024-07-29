@@ -2,14 +2,14 @@ VERSION 5.00
 Begin VB.Form InterfaceWindow 
    AutoRedraw      =   -1  'True
    BackColor       =   &H00000000&
-   ClientHeight    =   3192
+   ClientHeight    =   3195
    ClientLeft      =   60
-   ClientTop       =   648
+   ClientTop       =   645
    ClientWidth     =   4680
    KeyPreview      =   -1  'True
-   ScaleHeight     =   266
+   ScaleHeight     =   213
    ScaleMode       =   3  'Pixel
-   ScaleWidth      =   390
+   ScaleWidth      =   312
    StartUpPosition =   2  'CenterScreen
    Begin VB.Timer Animator 
       Enabled         =   0   'False
@@ -23,8 +23,8 @@ Begin VB.Form InterfaceWindow
          Caption         =   "&Animate Figures"
          Shortcut        =   ^A
       End
-      Begin VB.Menu DrawRadiansMenu 
-         Caption         =   "&Draw Radians"
+      Begin VB.Menu DrawRadiiMenu 
+         Caption         =   "&Draw Radii"
          Shortcut        =   ^R
       End
    End
@@ -40,14 +40,14 @@ Attribute VB_Exposed = False
 'This module contains this program's main interface window.
 Option Explicit
 
-'This procedure toggles drawing radians on/off.
-Private Sub ToggleDrawRadians()
+'This procedure toggles drawing radii on/off.
+Private Sub ToggleDrawRadii()
 On Error GoTo ErrorTrap
 Dim CurrentDrawRadii As Boolean
 
    CurrentDrawRadii = DrawRadii()
    DrawRadii NewDrawRadii:=Not CurrentDrawRadii
-   DrawRadiansMenu.Checked = DrawRadii()
+   DrawRadiiMenu.Checked = DrawRadii()
    
    DrawFigures Me, AnimatorActive:=Animator.Enabled
 
@@ -91,11 +91,11 @@ ErrorTrap:
    If HandleError(ReturnPreviousChoice:=True) = vbRetry Then Resume
 End Sub
 
-'This procedure gives the command to toggle drawing radians on/off.
-Private Sub DrawRadiansMenu_Click()
+'This procedure gives the command to toggle drawing radii on/off.
+Private Sub DrawRadiiMenu_Click()
 On Error GoTo ErrorTrap
    
-   ToggleDrawRadians
+   ToggleDrawRadii
 
 EndProcedure:
    Exit Sub
@@ -129,7 +129,7 @@ On Error GoTo ErrorTrap
    Me.Caption = App.Title
 
    AnimateFiguresMenu.Checked = Animator.Enabled
-   DrawRadiansMenu.Checked = DrawRadii()
+   DrawRadiiMenu.Checked = DrawRadii()
 
 EndProcedure:
    Exit Sub
@@ -157,7 +157,7 @@ End Sub
 Private Sub InformationMainMenu_Click()
 On Error GoTo ErrorTrap
 
-   MsgBox ProgramInformation(), vbInformation
+   MsgBox App.Comments, vbInformation, ProgramInformation()
 
 EndProcedure:
    Exit Sub
